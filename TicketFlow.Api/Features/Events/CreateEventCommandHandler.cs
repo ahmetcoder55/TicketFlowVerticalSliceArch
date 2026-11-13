@@ -4,7 +4,7 @@ using TicketFlow.Api.Database;
 
 namespace TicketFlow.Api.Features.Events
 {
-    public class CreateEventCommandHandler : IRequestHandler<CreateEventCommand, Result>
+    public class CreateEventCommandHandler : IRequestHandler<CreateEventCommand, Result<int>>
     {
         private readonly AppDbContext _context;
 
@@ -13,7 +13,7 @@ namespace TicketFlow.Api.Features.Events
             _context = context;
         }
 
-        public async Task<Result> Handle(CreateEventCommand request, CancellationToken cancellationToken)
+        public async Task<Result<int>> Handle(CreateEventCommand request, CancellationToken cancellationToken)
         {
             var eventItem = new Event
             {
