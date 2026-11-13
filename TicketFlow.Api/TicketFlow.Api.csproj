@@ -18,9 +18,4 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.15" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Database\" />
-    <Folder Include="Features\Events\" />
-  </ItemGroup>
-
 </Project>
