@@ -17,9 +17,9 @@ namespace TicketFlow.Api.Features.Events
         {
             var eventItem = new Event
             {
-                Title = request.Title,
-                Price = request.Price,
-                AvailableStock = request.InitialStock
+                Title = request.CreateEventRequestDto.Title,
+                Price = request.CreateEventRequestDto.Price,
+                AvailableStock = request.CreateEventRequestDto.InitialStock
             };
             _context.Events.Add(eventItem);
 
